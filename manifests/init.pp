@@ -1,4 +1,4 @@
-# == Class: fix-everything
+# == Class: fix_everything
 #
 # Full description of class everything here.
 #
@@ -35,7 +35,7 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class fix-everything {
+class fix_everything {
 
   exec { 'setenforce_zero':
     command => 'setenforce 0',
