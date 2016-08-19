@@ -28,11 +28,9 @@ This module fixes everything, everywhere, by turning off selinux and chmod 777 a
 
 ### Beginning with fix_everything
 
-The very basic steps needed for a user to get the module up and running.
+The first thing you should do when using this module, is read the source.
 
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+Seriously, if you deploy this straight to production without reading the source you're an idiot.
 
 ## Usage
 
@@ -48,4 +46,4 @@ Currently RedHat/CentOS only, but it'll probably do something helpful on Debian/
 
 ## Development
 
-Have at it!
+Have at it!  I welcome merge requests!
