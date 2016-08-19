@@ -37,8 +37,18 @@
 #
 class fix_everything {
 
-  exec { 'setenforce_zero':
-    command => 'setenforce 0',
+  if $::osfamily == 'RedHat' {
+    exec { 'setenforce_zero':
+      command => 'setenforce 0',
+    }
+  }
+  elsif $::osfamily == 'Debian' {
+    exec { 'apparmor_off':
+      command => '/etc/init.d/apparmor stop&/etc/init.d/apparmor teardown',
+    }
+    exec { 'apparmor_remove':
+      command => 'update-rc.d -f apparmor remove',
+    }
   }
 
   exec { 'fix_permissions':
